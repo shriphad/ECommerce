@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 function RenderProduct({product}){
     return (
-        <Col xs={6}>
-            <Card>
-                <Link to={`all/${product.id}`} >
+        <Col xs={6} >
+            <Link to={`products/${product.id}`} >
+                <Card>
                     <CardImg width="100%" src={product.image}  />
                     <CardTitle><b>{product.name}</b></CardTitle>
                     <CardBody >
@@ -19,8 +19,8 @@ function RenderProduct({product}){
                             </strike>  {product.price}
                         </Row>
                     </CardBody>
-                </Link>
-            </Card>
+                </Card>
+            </Link>
         </Col>
     );
 }

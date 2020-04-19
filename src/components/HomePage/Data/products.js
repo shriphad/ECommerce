@@ -7,6 +7,8 @@ export const Products =
             category: 'Bags',
             strike: '$2.45',
             price:'$1.45',
+            description:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+            specification:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
         },
         {
             id: 1,
@@ -15,6 +17,9 @@ export const Products =
             category: 'Bags',
             strike: '$9.35',
             price:'$5.45',
+            description:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+            specification:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+
         },
         {
             id: 2,
@@ -23,6 +28,9 @@ export const Products =
             category: 'Women',
             strike: '$6.85',
             price:'$5.45',
+            description:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant"
+            ,
+            specification:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
         },
         {
             id: 3,
@@ -31,6 +39,9 @@ export const Products =
             category: 'Women',
             strike: '$2.45',
             price:'$1.45',
+            description:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+            specification:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+
         },
         {
             id: 4,
@@ -39,5 +50,8 @@ export const Products =
             category: 'Men',
             strike: '$2.45',
             price:'$1.45',
+            description:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant",
+            specification:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+
         }
     ];
