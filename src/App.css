@@ -1,7 +1,6 @@
-.navbar-dark {
+.navbar {
   background-color: #512DA8;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
 }
-
 

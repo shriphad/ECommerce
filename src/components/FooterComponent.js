@@ -8,7 +8,7 @@ class Footer extends Component{
     render(){
         return(
             <>
-                <Navbar  dark expand="xs" >
+                <Navbar sticky="top"   dark expand="xs" >
                     <div className="contaniner navbar"  >
                         <Nav navbar >
                             <NavItem>
