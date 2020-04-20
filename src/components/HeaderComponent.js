@@ -1,69 +1,79 @@
-import React,{Component} from 'react';
-import { Row, Col,Input, Form } from 'reactstrap';
-import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import { Router, Route,Redirect, withRouter } from 'react-router-dom';
-class Header extends Component {
+import React, {Component} from 'react';
+import { Navbar, NavbarBrand, Nav,NavItem,Collapse ,Jumbotron, Row,Col,Input } from 'reactstrap';
+import {NavLink,Link} from 'react-router-dom';
+import SideNav, {MenuIcon} from 'react-simple-sidenav';
+import ProfileMenu from './ProfileDropDownComponent';
+import {Dropdown,DropdownButton,NavDropdown} from 'react-bootstrap';
+import { FaShoppingCart,MdMenu } from 'react-icons/fa';
 
-  render() {
-    return (
-            <div className="contaniner">
-                <Row>
-                    <Col xs={2}>
-                        <img src='assets/images/logo.png' alt='Rick' />
-                    </Col>
-                    <Col xs={6}>
+
+class Header extends Component{
+
+    constructor(props){
+        super(props);
+        this.state={
+            showNav: false
+        }
+    }
+
+    render(){
+        return(
+            <>
+            
+                <Navbar sticky="top"   dark expand="xs" >
+                    <div className="contaniner navbar"  >
+                        <Nav navbar >
+                            <NavItem>
+                                <MenuIcon  onClick={() => this.setState({showNav: true})}/>
+                                <SideNav  className="sidenav"
+                                    showNav={this.state.showNav}
+                                    onHideNav={()=>this.setState({showNav:false})}
+                                    title={<div>Rick </div>}
+                                    titleStyle={{backgroundColor: '#0000aa'}}
+                                    itemStyle      =  {{backgroundColor: '#ffffff'}}
+                                    itemHoverStyle =  {{backgroundColor: '#2196F3'}}
+                                    items={[
+                                    <Link to="">Men</Link>,
+                                    <Link to="">Women</Link>,
+                                    <Link to="">Bags</Link>,
+                                    <Link to="">Cosmetics</Link>,
+                                    <Link to="">Sports</Link>
+                                    ]} />
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link" to="/home" >
+                                    <img src='assets/images/logo.png' alt='Rick' />
+                                </NavLink>
+                            </NavItem>
+                            <Col xs={4}></Col>
+                            <Col xs={2}>
+                                <NavLink className="nav-link" to="/cart" >
+                                    <FaShoppingCart size={30} />
+                                </NavLink>
+                            </Col>
+                            <Col  xs={4}>
+                            <NavDropdown title="Profile" id="nav-dropdown">
+                                <NavDropdown.Item eventKey="4.1">My Account</NavDropdown.Item>
+                                <NavDropdown.Item eventKey="4.2">My Orders</NavDropdown.Item>
+                                <NavDropdown.Item eventKey="4.3">My Chats</NavDropdown.Item>
+                                <NavDropdown.Item eventKey="4.3">My Wishlist</NavDropdown.Item>
+                                <NavDropdown.Item eventKey="4.3">My Cart</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+                            </NavDropdown>
+                            </Col>
+                        </Nav>                        
+                    </div>
+                </Navbar>
+                <Row >
+                    <Col>
                         <Input type="text" name="search" placeholder="Search"/>
                     </Col>
-                    
                 </Row>
-            </div>
-        
-      );
-  }
+            </>
+        );
+    }
+
 }
 
 export default Header;
-
-
-/*
-<Router>
-<Route render={({ location, history }) => (
-    <React.Fragment>
-        <SideNav
-            // onSelect={(selected) => {
-            //     const to = '/' + selected;
-            //     if (location.pathname !== to) {
-            //         history.push(to);
-            //     }
-            // }}
-        >
-            <SideNav.Toggle />
-            <SideNav.Nav defaultSelected="home">
-                <NavItem eventKey="home">
-                    <NavIcon>
-                        <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
-                    </NavIcon>
-                    <NavText>
-                        Home
-                    </NavText>
-                </NavItem>
-                <NavItem eventKey="devices">
-                    <NavIcon>
-                        <i className="fa fa-fw fa-device" style={{ fontSize: '1.75em' }} />
-                    </NavIcon>
-                    <NavText>
-                        Devices
-                    </NavText>
-                </NavItem>
-            </SideNav.Nav>
-        </SideNav>
-        <main>
-            <Route path="/" exact 
-            />
-        </main>
-    </React.Fragment>
-)}
-/>
-</Router>
-*/

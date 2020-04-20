@@ -2,6 +2,7 @@ export const Products =
     [
         {
             id: 0,
+            cid: 2,
             name:'Vanity Bag',
             image: 'assets/images/products/vanity bag.png',
             category: 'Bags',
@@ -12,6 +13,7 @@ export const Products =
         },
         {
             id: 1,
+            cid: 2,
             image:'assets/images/products/leather bag.png',
             name: 'Leather Bag',
             category: 'Bags',
@@ -23,6 +25,7 @@ export const Products =
         },
         {
             id: 2,
+            cid: 1,
             name:'Ear Ring' ,
             image: 'assets/images/products/ear ring two.png',
             category: 'Women',
@@ -34,6 +37,7 @@ export const Products =
         },
         {
             id: 3,
+            cid: 1,
             name:'Ear Ring',
             image: 'assets/images/products/ear ring.png',
             category: 'Women',
@@ -45,6 +49,7 @@ export const Products =
         },
         {
             id: 4,
+            cid: 0,
             name:'Belt',
             image: 'assets/images/products/belt.png',
             category: 'Men',

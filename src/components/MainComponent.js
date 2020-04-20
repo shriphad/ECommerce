@@ -1,11 +1,12 @@
 import React,{Component} from 'react';
-import Header from './HeaderComponent';
+// import Header from './HeaderComponent';
 import HomePage from './HomePageComponent';
 import {Switch,Route,Redirect } from 'react-router-dom';
-import Footer from './FooterComponent';
+import Header from './HeaderComponent';
 import ProductDetail from './ProductDetailComponent'
 import Profile from './ProfileComponent';
 import { Container } from 'reactstrap';
+import { CategoriesRoutes } from './CategoriesRoutesComponent'
 
 class Main extends Component {
 
@@ -20,7 +21,7 @@ class Main extends Component {
                         <Route path="/profile" component={Profile} />
                         <Redirect to="/home" />
                     </Switch>
-                    <Footer />  
+                    {/* <Footer />   */}
                 </Container>
             </div>
       );

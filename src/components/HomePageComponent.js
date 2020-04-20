@@ -3,6 +3,7 @@ import { Row, Col, Container } from 'reactstrap';
 import Category from './HomePage/CategoriesComponent'
 import AllProducts from './HomePage/AllProducts'
 import {Products} from './HomePage/Data/products';
+import SlideShow from './HomePage/SlideShowComponent';
 
 class HomePage extends Component{
 
@@ -19,7 +20,7 @@ class HomePage extends Component{
         return(
             <div>
                 <br/>
-                <img src="assets/images/bag.jpg" className="img-fluid"/>
+                <SlideShow />
                 <Category />
                 <AllProducts products={this.state.products} />
             </div>
