@@ -54,3 +54,23 @@ h3 {
   background: #adceed;
 }
 
+.sidenav{
+  overflow-y: scroll;
+  position: fixed;
+}
+
+.link-sidebar {
+  color: #00f;
+  font-size: 20px;
+}
+.link-sidebar:hover {
+   color: #fff
+}
+
+.link-sidebar-child {
+  color: #00f;
+  font-size: 17px;
+}
+.link-sidebar-child:hover {
+   color: #fff
+}

@@ -2,19 +2,11 @@ import React, {Component} from 'react';
 import { Navbar, NavbarBrand, Nav,NavItem,Collapse ,Jumbotron, Row,Col,Input } from 'reactstrap';
 import {NavLink,Link} from 'react-router-dom';
 import SideNav, {MenuIcon} from 'react-simple-sidenav';
-import ProfileMenu from './ProfileDropDownComponent';
-import {Dropdown,DropdownButton,NavDropdown} from 'react-bootstrap';
-import { FaShoppingCart,MdMenu } from 'react-icons/fa';
-
+import {NavDropdown} from 'react-bootstrap';
+import { FaShoppingCart } from 'react-icons/fa';
+import SideNavBar from './SideNavComponent';
 
 class Header extends Component{
-
-    constructor(props){
-        super(props);
-        this.state={
-            showNav: false
-        }
-    }
 
     render(){
         return(
@@ -24,21 +16,7 @@ class Header extends Component{
                     <div className="contaniner navbar"  >
                         <Nav navbar >
                             <NavItem>
-                                <MenuIcon  onClick={() => this.setState({showNav: true})}/>
-                                <SideNav  className="sidenav"
-                                    showNav={this.state.showNav}
-                                    onHideNav={()=>this.setState({showNav:false})}
-                                    title={<div>Rick </div>}
-                                    titleStyle={{backgroundColor: '#0000aa'}}
-                                    itemStyle      =  {{backgroundColor: '#ffffff'}}
-                                    itemHoverStyle =  {{backgroundColor: '#2196F3'}}
-                                    items={[
-                                    <Link to="">Men</Link>,
-                                    <Link to="">Women</Link>,
-                                    <Link to="">Bags</Link>,
-                                    <Link to="">Cosmetics</Link>,
-                                    <Link to="">Sports</Link>
-                                    ]} />
+                                <SideNavBar />
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/home" >

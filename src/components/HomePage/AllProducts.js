@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function RenderProduct({product}){
     return (
-        <Col xs={6} >
+        <Col xs={6} md={4} >
             <Link to={`products/${product.id}`} >
                 <Card>
                     <CardImg width="100%" src={product.image}  />

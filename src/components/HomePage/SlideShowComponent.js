@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade,Zoom } from 'react-slideshow-image';
+import { Zoom } from 'react-slideshow-image';
  
 const fadeImages = [
   'assets/images/products/belt.png',

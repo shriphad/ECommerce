@@ -1,8 +1,7 @@
 import React,{Component} from 'react';
-import { Row, Col,Input, Form } from 'reactstrap';
-import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import { Row, Col,Input } from 'reactstrap';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import { Router, Route,Redirect, withRouter } from 'react-router-dom';
+
 class HeaderHeader extends Component {
 
   render() {

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Row, Col, Container } from 'reactstrap';
+// import { Row, Col, Container } from 'reactstrap';
 import Category from './HomePage/CategoriesComponent'
 import AllProducts from './HomePage/AllProducts'
 import {Products} from './HomePage/Data/products';
